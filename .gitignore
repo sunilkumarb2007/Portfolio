@@ -37,3 +37,4 @@ pnpm-debug.log*
 # coverage
 coverage
 .nyc_output
+.env*.local
