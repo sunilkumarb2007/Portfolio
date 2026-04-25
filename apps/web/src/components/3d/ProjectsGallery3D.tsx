@@ -37,15 +37,15 @@ function Card3D({ project, index, total, active, setActive, onOpen }: Card3DProp
   const dimmed = active !== null && !isActive;
   const color = projectColor(project.category);
 
-  // Curved layout: arc cards along an arc.
-  const arc = Math.PI * 0.85;
+  // Curved layout: cards along a gentle arc, all facing the camera.
+  const arc = Math.min(Math.PI * 0.55, (total - 1) * 0.32);
   const t = total === 1 ? 0.5 : index / (total - 1);
   const angle = -arc / 2 + t * arc;
-  const radius = 5;
+  const radius = 4.2;
   const baseX = Math.sin(angle) * radius;
-  const baseZ = -Math.cos(angle) * radius + radius;
-  const baseY = (index % 2 === 0 ? 0.05 : -0.05);
-  const baseRot = -angle * 0.6;
+  const baseZ = -Math.cos(angle) * radius + radius * 0.2;
+  const baseY = index % 2 === 0 ? 0.05 : -0.05;
+  const baseRot = -angle * 0.45;
 
   useFrame((_s, delta) => {
     if (!groupRef.current) return;
@@ -179,7 +179,7 @@ export function ProjectsGallery3D({ projects, onOpen }: Props) {
     <div className="relative h-[480px] w-full md:h-[560px]">
       <Canvas
         dpr={[1, 1.75]}
-        camera={{ position: [0, 0.6, 5.2], fov: 50 }}
+        camera={{ position: [0, 0.5, 6.6], fov: 48 }}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       >
         <ambientLight intensity={0.5} />
@@ -198,7 +198,7 @@ export function ProjectsGallery3D({ projects, onOpen }: Props) {
             onOpen={onOpen}
           />
         ))}
-        <fog attach="fog" args={['#06070b', 6, 14]} />
+        <fog attach="fog" args={['#06070b', 7, 16]} />
       </Canvas>
 
       <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-bg-elev/70 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-ink-mute backdrop-blur">
