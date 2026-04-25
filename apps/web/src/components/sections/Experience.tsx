@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { experience } from '@/content/experience';
+import { experience, certifications } from '@/content/experience';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export function Experience() {
@@ -10,7 +10,7 @@ export function Experience() {
         <SectionHeader
           eyebrow="04 — experience"
           title="A timeline, not a CV."
-          subtitle="Recent first. Each entry below links to a body of production code, not slides."
+          subtitle="Recent first. Internships, education, and the certifications I am earning along the way."
         />
 
         <ol className="relative space-y-10">
@@ -62,6 +62,37 @@ export function Experience() {
             </motion.li>
           ))}
         </ol>
+
+        <div className="mt-20">
+          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-ink-mute">
+            certifications
+          </p>
+          <ul className="grid gap-3 md:grid-cols-2">
+            {certifications.map((c) => (
+              <li
+                key={c.name}
+                className="glass flex items-center justify-between gap-4 rounded-xl px-4 py-3"
+              >
+                <div className="min-w-0">
+                  <p className="truncate font-display text-sm tracking-tight text-ink">{c.name}</p>
+                  <p className="truncate text-xs text-ink-dim">
+                    {c.issuer} · {c.date}
+                  </p>
+                </div>
+                <span
+                  className={
+                    'shrink-0 rounded-full px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest ' +
+                    (c.status === 'completed'
+                      ? 'border border-accent-cyan/40 bg-accent-cyan/10 text-accent-cyan'
+                      : 'border border-white/10 bg-white/5 text-ink-mute')
+                  }
+                >
+                  {c.status === 'completed' ? 'earned' : 'in progress'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -1,29 +1,28 @@
 /**
- * Static profile content. Edit this file to swap in your real bio without
- * touching components.
+ * Static profile content. Sourced directly from the resume + LinkedIn.
+ * Edit this file to swap in fresh bio copy without touching components.
  */
 export const profile = {
   name: 'Sunil Kumar B',
   shortName: 'Sunil',
-  role: 'Senior Full-Stack Engineer',
+  role: 'Full-Stack Developer & Engineering Student',
   pitch:
-    'I design and ship high-performance systems — from realtime infrastructure and edge AI to GPU-accelerated web experiences.',
-  location: 'Bengaluru, IN — Remote, anywhere',
-  email: 'hello@example.com',
+    'Engineering student at Panimalar Engineering College, building full-stack web apps and learning to ship production systems — JavaScript, Python, Go, AWS.',
+  location: 'Chennai, India · Open to remote internships',
+  email: 'sunilkumarb200703@gmail.com',
   social: {
-    github: 'https://github.com/sunilkumarb2007',
-    linkedin: 'https://www.linkedin.com/in/your-handle',
-    x: 'https://x.com/your-handle',
+    github: 'https://github.com/Sunilkumarb2007',
+    linkedin: 'https://www.linkedin.com/in/sunilkumarblink/',
   },
   about: [
-    'I build software that has to be fast, reliable, and feel inevitable. Twelve years across the stack — frontend, backend, and the infrastructure underneath.',
-    'I care about three things: latency, correctness, and the craft of the interface. Most recently I have been working on realtime collaboration engines, edge AI gateways, and graph-native observability.',
-    'When I am not shipping, I am probably writing WGSL compute shaders, reading distributed systems papers, or rebuilding my mechanical keyboard.',
+    'Hi — I am Sunil, a Bachelor of Engineering student in Electrical & Electronics at Panimalar Engineering College, Chennai. I write software because the loop of "imagine, build, ship, debug" is the most honest feedback any craft has.',
+    'Across my projects I have shipped a full-stack AI medical assistant (React + Flask), a Go bookstore service with GORM and Gorilla Mux, an AWS CodePipeline deploying to EC2, and shell automation around the GitHub API. I care about clean APIs, defensive error handling, and making things actually work in production.',
+    'Currently going deeper into distributed systems, cloud architecture (AWS, OCI), and AI tooling. Outside of class I am writing more code, prepping for AWS/Oracle certifications, and looking for an internship where I can learn from people who ship.',
   ],
   highlights: [
-    { label: 'Years shipping', value: '12+' },
-    { label: 'Production systems', value: '40+' },
-    { label: 'Open source ★', value: '8.4k' },
-    { label: 'p99 obsession', value: '∞' },
+    { label: 'Languages', value: '6+' },
+    { label: 'Projects shipped', value: '4' },
+    { label: 'Cloud certs', value: '2' },
+    { label: 'CGPA', value: '7.8' },
   ],
 } as const;

@@ -7,7 +7,7 @@ export function About() {
   return (
     <section id="about" className="relative px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <SectionHeader eyebrow="01 — about" title="Engineer, by craft." />
+        <SectionHeader eyebrow="01 — about" title="Student. Builder. Curious about everything." />
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-7 space-y-6">
             {profile.about.map((p, i) => (
@@ -37,11 +37,11 @@ export function About() {
               </div>
               <ul className="divide-y divide-white/5 text-sm">
                 {[
-                  ['Latency is the product.', 'p95 + p99, not averages.'],
-                  ['Observability first.', 'You can\u2019t fix what you can\u2019t see.'],
-                  ['Ship to production.', 'Anything else is a hobby project.'],
-                  ['Boring, then clever.', 'Use Postgres. Cache later.'],
-                  ['Type the boundaries.', 'Fewer mocks, more tests.'],
+                  ['Ship something every week.', 'A small thing finished beats a big thing imagined.'],
+                  ['Read the actual error.', 'Stack traces are not decoration.'],
+                  ['Boring tools, sharp questions.', 'Postgres + REST + JSON gets very far.'],
+                  ['Learn in public.', 'Open-source the homework.'],
+                  ['Be honest about what you know.', 'And about what you do not.'],
                 ].map(([title, body]) => (
                   <li key={title} className="px-5 py-3">
                     <p className="text-ink">{title}</p>

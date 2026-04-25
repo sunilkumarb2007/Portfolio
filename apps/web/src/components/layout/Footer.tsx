@@ -17,9 +17,6 @@ export function Footer() {
           <a href={profile.social.linkedin} target="_blank" rel="noreferrer" className="hover:text-ink">
             LinkedIn
           </a>
-          <a href={profile.social.x} target="_blank" rel="noreferrer" className="hover:text-ink">
-            X
-          </a>
           <a href={`mailto:${profile.email}`} className="hover:text-ink">
             {profile.email}
           </a>

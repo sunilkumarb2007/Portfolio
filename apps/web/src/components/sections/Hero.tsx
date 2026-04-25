@@ -43,7 +43,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-cyan opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan" />
           </span>
-          Available for staff/principal roles · {profile.location}
+          Open to internships & collaborations · {profile.location}
         </motion.span>
 
         <motion.h1
@@ -86,7 +86,7 @@ export function Hero() {
             rel="noreferrer"
             className="ml-1 hidden items-center gap-2 rounded-full px-3 py-1.5 text-sm text-ink-dim transition-colors hover:text-ink sm:inline-flex"
           >
-            <span className="font-mono">github.com/sunilkumarb2007</span> ↗
+            <span className="font-mono">github.com/Sunilkumarb2007</span> ↗
           </a>
         </motion.div>
 

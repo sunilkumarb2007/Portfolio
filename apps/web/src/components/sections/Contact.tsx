@@ -149,7 +149,7 @@ export function Contact() {
               >
                 {profile.email}
               </a>
-              <p className="mt-1 text-sm text-ink-dim">Encrypted via Proton, also fine over SES.</p>
+              <p className="mt-1 text-sm text-ink-dim">Best for internships, freelance, or collaborations.</p>
             </div>
             <div className="glass rounded-2xl p-6">
               <p className="font-mono text-xs uppercase tracking-widest text-ink-mute">
@@ -164,11 +164,6 @@ export function Contact() {
                 <li>
                   <a href={profile.social.linkedin} className="text-ink hover:text-accent-cyan" target="_blank" rel="noreferrer">
                     LinkedIn ↗
-                  </a>
-                </li>
-                <li>
-                  <a href={profile.social.x} className="text-ink hover:text-accent-cyan" target="_blank" rel="noreferrer">
-                    X ↗
                   </a>
                 </li>
               </ul>

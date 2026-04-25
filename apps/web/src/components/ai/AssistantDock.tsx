@@ -13,10 +13,10 @@ interface Msg {
 }
 
 const SUGGESTED = [
-  'What are your most impressive projects?',
-  'How do you approach scaling realtime systems?',
-  'What are your strongest skills?',
-  'Are you available for staff roles?',
+  'Tell me about your AI Medical Assistant project.',
+  'What is your strongest stack right now?',
+  'What internships are you open to?',
+  'How can I get in touch with you?',
 ];
 
 export function AssistantDock() {

@@ -1,47 +1,52 @@
 export interface SkillNode {
   name: string;
   group: 'frontend' | 'backend' | 'systems' | 'ai' | 'infra' | 'craft';
-  level: number; // 0..1
+  level: number; // 0..1 — self-rated, calibrated against shipped projects
 }
 
 export const skills: SkillNode[] = [
   // frontend
-  { name: 'TypeScript', group: 'frontend', level: 0.98 },
-  { name: 'React', group: 'frontend', level: 0.96 },
-  { name: 'Next.js', group: 'frontend', level: 0.94 },
-  { name: 'Three.js / R3F', group: 'frontend', level: 0.88 },
-  { name: 'WebGPU / WGSL', group: 'frontend', level: 0.7 },
-  { name: 'Tailwind', group: 'frontend', level: 0.95 },
+  { name: 'JavaScript', group: 'frontend', level: 0.85 },
+  { name: 'React', group: 'frontend', level: 0.8 },
+  { name: 'Vite', group: 'frontend', level: 0.75 },
+  { name: 'HTML5 / CSS3', group: 'frontend', level: 0.9 },
+  { name: 'Tailwind CSS', group: 'frontend', level: 0.78 },
+  { name: 'Next.js', group: 'frontend', level: 0.7 },
 
   // backend
-  { name: 'Node.js', group: 'backend', level: 0.95 },
-  { name: 'Go', group: 'backend', level: 0.85 },
-  { name: 'Rust', group: 'backend', level: 0.78 },
-  { name: 'Postgres', group: 'backend', level: 0.92 },
-  { name: 'Redis', group: 'backend', level: 0.9 },
-  { name: 'GraphQL / tRPC', group: 'backend', level: 0.88 },
+  { name: 'Node.js', group: 'backend', level: 0.78 },
+  { name: 'Express.js', group: 'backend', level: 0.78 },
+  { name: 'Python', group: 'backend', level: 0.75 },
+  { name: 'Flask', group: 'backend', level: 0.72 },
+  { name: 'Go', group: 'backend', level: 0.7 },
+  { name: 'Java', group: 'backend', level: 0.78 },
+  { name: 'SQL / MySQL', group: 'backend', level: 0.75 },
+  { name: 'REST API design', group: 'backend', level: 0.78 },
 
-  // systems
-  { name: 'Distributed systems', group: 'systems', level: 0.86 },
-  { name: 'CRDTs', group: 'systems', level: 0.84 },
-  { name: 'Observability', group: 'systems', level: 0.9 },
-  { name: 'Performance', group: 'systems', level: 0.92 },
+  // systems / cs fundamentals
+  { name: 'Data structures', group: 'systems', level: 0.78 },
+  { name: 'Algorithms', group: 'systems', level: 0.75 },
+  { name: 'OOP', group: 'systems', level: 0.8 },
+  { name: 'System design (basics)', group: 'systems', level: 0.55 },
+  { name: 'Async programming', group: 'systems', level: 0.7 },
 
   // ai
-  { name: 'LLM infra', group: 'ai', level: 0.88 },
-  { name: 'Vector search', group: 'ai', level: 0.82 },
-  { name: 'Eval pipelines', group: 'ai', level: 0.78 },
+  { name: 'LLM API integration', group: 'ai', level: 0.65 },
+  { name: 'Prompt engineering', group: 'ai', level: 0.6 },
 
   // infra
-  { name: 'Kubernetes', group: 'infra', level: 0.86 },
-  { name: 'AWS', group: 'infra', level: 0.88 },
-  { name: 'Cloudflare', group: 'infra', level: 0.84 },
-  { name: 'Terraform', group: 'infra', level: 0.78 },
+  { name: 'AWS (EC2 · S3 · CodePipeline)', group: 'infra', level: 0.7 },
+  { name: 'Oracle Cloud (OCI)', group: 'infra', level: 0.6 },
+  { name: 'Git / GitHub', group: 'infra', level: 0.88 },
+  { name: 'GitHub Actions', group: 'infra', level: 0.7 },
+  { name: 'Vercel', group: 'infra', level: 0.78 },
+  { name: 'Docker (basics)', group: 'infra', level: 0.55 },
 
   // craft
-  { name: 'Design systems', group: 'craft', level: 0.9 },
-  { name: 'API design', group: 'craft', level: 0.92 },
-  { name: 'Mentoring', group: 'craft', level: 0.86 },
+  { name: 'Problem solving', group: 'craft', level: 0.85 },
+  { name: 'Communication', group: 'craft', level: 0.8 },
+  { name: 'Time management', group: 'craft', level: 0.78 },
+  { name: 'Team collaboration', group: 'craft', level: 0.82 },
 ];
 
 export const groupColors: Record<SkillNode['group'], string> = {

@@ -9,50 +9,72 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
-    company: 'Lattice Labs',
-    role: 'Staff Engineer, Realtime Platform',
-    period: '2023 — Present',
+    company: 'CodSoft',
+    role: 'Web Development Intern',
+    period: 'Jun 2025 — Jul 2025',
     location: 'Remote',
     bullets: [
-      'Architected a CRDT sync server scaling to 50k concurrent rooms with sharded routing.',
-      'Cut sync bandwidth 73% by designing a binary delta protocol on top of Yjs.',
-      'Mentored 6 engineers; introduced load-shape testing into the release process.',
+      'Completed a structured 4-week internship building responsive web projects end-to-end.',
+      'Developed interactive UI components and integrated REST APIs into a working flow.',
+      'Practiced production habits: error handling, async data flow, and clean component decomposition.',
     ],
-    stack: ['TypeScript', 'Rust', 'Redis', 'WebSockets', 'k8s'],
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'React', 'REST'],
   },
   {
-    company: 'Helion AI',
-    role: 'Senior Full-Stack Engineer',
-    period: '2021 — 2023',
-    location: 'Remote',
+    company: 'Panimalar Engineering College',
+    role: 'BE — Electrical & Electronics Engineering',
+    period: 'Oct 2024 — Present',
+    location: 'Chennai, India',
     bullets: [
-      'Built the edge inference gateway routing 1.2B requests/mo across 5 LLM providers.',
-      'Implemented semantic caching, hitting 95% on FAQ traffic and saving $11k/mo.',
-      'Owned the dashboard end-to-end: React, tRPC, Postgres, Tailwind design system.',
+      'CGPA 7.8. Coursework spans data structures, algorithms, OOP, async programming, and database systems.',
+      'Building a parallel software portfolio: full-stack apps in JS/Python/Go and cloud projects on AWS.',
+      'Earning AWS and Oracle Cloud Infrastructure certifications alongside the core curriculum.',
     ],
-    stack: ['TypeScript', 'Cloudflare Workers', 'Postgres', 'tRPC'],
+    stack: ['Java', 'Python', 'C', 'DSA', 'OOP'],
   },
   {
-    company: 'Northwave',
-    role: 'Senior Engineer, Observability',
-    period: '2019 — 2021',
-    location: 'Hybrid',
+    company: 'Vailankanni Matriculation HSS',
+    role: 'Higher Secondary — Computer Science',
+    period: 'Jun 2023 — Mar 2024',
+    location: 'Krishnagiri, India',
     bullets: [
-      'Replaced ELK with a Neo4j-backed trace store; p95 RCA queries 11s → 280ms.',
-      'Designed a query DSL that compiles to Cypher; adopted by 40+ internal teams.',
-      'Built a span sampler that preserves traces causally adjacent to errors.',
+      'Higher School Education with Computer Science specialisation; graduated at 70.43%.',
+      'First exposure to programming, problem solving, and computer science fundamentals.',
     ],
-    stack: ['Go', 'Neo4j', 'OpenTelemetry', 'gRPC'],
+    stack: ['C', 'C++', 'Python (intro)'],
+  },
+];
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  status: 'completed' | 'in-progress';
+}
+
+export const certifications: Certification[] = [
+  {
+    name: 'AWS Academy Cloud Foundations',
+    issuer: 'Amazon Web Services',
+    date: 'Jul 2025',
+    status: 'completed',
   },
   {
-    company: 'Independent',
-    role: 'Founder, R&D Studio',
-    period: '2016 — 2019',
-    location: 'Bengaluru',
-    bullets: [
-      'Shipped 9 product MVPs across fintech, climate tech, and developer tools.',
-      'Three later acquired or operated as standalone businesses.',
-    ],
-    stack: ['Node.js', 'React', 'Postgres', 'WebGL'],
+    name: 'Oracle Cloud Infrastructure Architect Associate',
+    issuer: 'Oracle',
+    date: 'Jun 2025',
+    status: 'completed',
+  },
+  {
+    name: 'Introduction to NoSQL Databases',
+    issuer: 'Infosys',
+    date: 'Mar 2026',
+    status: 'in-progress',
+  },
+  {
+    name: 'Data Structures and Algorithms using Java',
+    issuer: 'Infosys',
+    date: 'Mar 2026',
+    status: 'in-progress',
   },
 ];
