@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "buildCommand": "cd ../.. && npm --workspace @portfolio/api run prisma:generate && npm --workspace @portfolio/api run build",
   "installCommand": "cd ../.. && npm install",
   "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }],
   "functions": {
