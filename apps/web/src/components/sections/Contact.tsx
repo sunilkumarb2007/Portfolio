@@ -70,7 +70,7 @@ export function Contact() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="05 — contact"
-          title="Let\u2019s build something together."
+          title={'Let\u2019s build something together.'}
           subtitle="Roles, freelance work, or just nerding out about distributed systems — I read everything."
         />
 

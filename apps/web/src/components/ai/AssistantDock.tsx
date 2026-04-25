@@ -97,7 +97,7 @@ export function AssistantDock() {
               <div>
                 <p className="font-display text-sm tracking-tight">Portfolio Assistant</p>
                 <p className="text-[10px] uppercase tracking-widest text-ink-mute">
-                  grounded on this site\u2019s data
+                  grounded on this site’s data
                 </p>
               </div>
               <button
