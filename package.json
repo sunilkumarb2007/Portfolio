@@ -1,0 +1,34 @@
+{
+  "name": "portfolio-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade 3D interactive portfolio: Next.js + R3F frontend, Node/Postgres backend, AI assistant",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "build": "npm-run-all --serial build:api build:web",
+    "build:web": "npm --workspace apps/web run build",
+    "build:api": "npm --workspace apps/api run build",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:web": "npm --workspace apps/web run lint",
+    "lint:api": "npm --workspace apps/api run lint",
+    "typecheck": "npm-run-all --parallel typecheck:*",
+    "typecheck:web": "npm --workspace apps/web run typecheck",
+    "typecheck:api": "npm --workspace apps/api run typecheck",
+    "test": "npm-run-all --parallel test:*",
+    "test:api": "npm --workspace apps/api run test --if-present",
+    "test:web": "npm --workspace apps/web run test --if-present",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

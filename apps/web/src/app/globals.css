@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --grid-fade: 28rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-ink antialiased;
+  font-feature-settings: 'ss01', 'ss02', 'cv11';
+  background:
+    radial-gradient(1200px 800px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%),
+    radial-gradient(900px 700px at -10% 30%, rgba(34, 211, 238, 0.12), transparent 60%),
+    #06070b;
+}
+
+::selection {
+  @apply bg-accent/40 text-ink;
+}
+
+/* Subtle grid background applied per-section via .bg-grid */
+.bg-grid {
+  background-image: var(--tw-gradient-stops, radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0));
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(180deg, black, black 60%, transparent);
+          mask-image: linear-gradient(180deg, black, black 60%, transparent);
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(17, 20, 29, 0.72), rgba(17, 20, 29, 0.4));
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #c8c2ff 0%, #7c5cff 30%, #22d3ee 60%, #ff5cab 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Hide scrollbar in webkit while keeping scroll behavior */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid theme('colors.accent.DEFAULT');
+  outline-offset: 2px;
+  border-radius: 6px;
+}
